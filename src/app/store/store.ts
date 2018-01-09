@@ -1,9 +1,9 @@
-import { HomeStore } from 'app/store/home/home-store';
+import { TodoStore } from 'app/store/home/todo-store';
 
 export class Store {
-  private _homeStore = new HomeStore();
+  private _todoStore = new TodoStore();
   
-  get homeStore(): HomeStore {
-    return this._homeStore;
+  get todoStore(): TodoStore {
+    return this._todoStore;
   }
 }

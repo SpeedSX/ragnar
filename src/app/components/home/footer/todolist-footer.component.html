@@ -1,0 +1,19 @@
+<!-- This footer should hidden by default and shown when there are todos -->
+<footer class="footer" *ngIf="todoCount$ | async">
+  <!-- This should be `0 items left` by default -->
+  <span class="todo-count"><strong>{{ todoCount$ | async}}</strong> item{{ (todoCount$ | async) > 1 ? 's' : '' }} left</span>
+  <!-- Remove this if you don't implement routing -->
+  <ul class="filters">
+    <li>
+      <a routerLink="/home/all" routerLinkActive="selected">All</a>
+    </li>
+    <li>
+      <a routerLink="/home/active" routerLinkActive="selected">Active</a>
+    </li>
+    <li>
+      <a routerLink="/home/completed" routerLinkActive="selected">Completed</a>
+    </li>
+  </ul>
+  <!-- Hidden if no completed items are left ? -->
+  <button class="clear-completed" (click)="handleClearCompleted()">Clear completed</button>
+</footer>

@@ -3,7 +3,7 @@ import { BrowserModule, HammerGestureConfig } from '@angular/platform-browser';
 import { ActionsModule } from 'app/actions/actions.module';
 import { AppRoutingModule } from 'app/app-routing.module';
 import { AppComponent } from 'app/components/app.component';
-import { HomeModule } from 'app/components/home/home.module';
+import { TodoListModule } from 'app/components/home/todolist.module';
 import { RepositoriesModule } from 'app/repositories/repositories.module';
 import { ServicesModule } from 'app/services/services.module';
 import { StoreModule } from 'app/store/store.module';
@@ -18,7 +18,7 @@ export class MyHammerConfig extends HammerGestureConfig {
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    HomeModule,
+    TodoListModule,
     AppRoutingModule,
     ActionsModule,
     StoreModule,
